@@ -36,7 +36,6 @@
   "dependencies": {
     "@hot-loader/react-dom": "^16.8.6",
     "classnames": "^2.2.6",
-    "siema": "^1.5.1",
-    "siema-react": "^1.0.4"
+    "siema": "^1.5.1"
   }
 }
