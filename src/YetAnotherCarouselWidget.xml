@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="siemens.yetanothercarouselwidget.YetAnotherCarouselWidget" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Yet Another Carousel Widget</name>
+    <description>Mendix wrapper around Siema.js Carousel library</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="Carousel Settings">
+            <property key="duration" type="integer" required="true" defaultValue="200">
+                <caption>Duration (ms)</caption>
+                <description>Slide transition duration in milliseconds</description>
+            </property>
+            <property key="easing" type="string" defaultValue="ease-out">
+                <caption>Easing</caption>
+                <description>Acceleration curve (similiar to a CSS transition-timing-function</description>
+            </property>
+            <property key="perPage" type="integer" required="true" defaultValue="1">
+                <caption>Slides per Page</caption>
+                <description>How many slide elements per page?</description>
+            </property>
+            <property key="startIndex" type="integer" required="true" defaultValue="0">
+                <caption>Start Index</caption>
+                <description>Index (zero-based) of the starting slide</description>
+            </property>
+            <property key="draggable" type="boolean" required="true" defaultValue="false">
+                <caption>Draggable?</caption>
+                <description>Allow users to drag to the next slide?</description>
+            </property>
+            <property key="threshold" type="integer" required="true" defaultValue="20">
+                <caption>Threshold</caption>
+                <description>Touch and mouse dragging threshold (in px)</description>
+            </property>
+            <property key="loop" type="boolean" required="true" defaultValue="true">
+                <caption>Autoloop</caption>
+                <description>Auto-loops through the slides</description>
+            </property>
+            <property key="showPreviousNextButton" type="boolean" defaultValue="false">
+                <caption>Show Previous and Next Button</caption>
+                <description>Allows users to use buttons to navigate through the slides.</description>
+            </property>
+            <property key="buttonLabelText_Next" type="textTemplate">
+                <caption>Next Button Label</caption>
+                <description/>
+                    <translations>
+                        <translation lang="en_US">Next</translation>
+                        <translation lang="de_DE">Weiter</translation>
+                    </translations>
+            </property>
+            <property key="buttonLabelText_Previous" type="textTemplate">
+                <caption>Previous Button Label</caption>
+                <description/>
+                    <translations>
+                        <translation lang="en_US">Previous</translation>
+                        <translation lang="de_DE">Zurück</translation>
+                    </translations>
+            </property>
+            <property key="bootstrapStyle" type="enumeration" defaultValue="default">
+                <caption>Button style</caption>
+                <description/>
+                <enumerationValues>
+                    <enumerationValue key="default">Default</enumerationValue>
+                    <enumerationValue key="primary">Primary</enumerationValue>
+                    <enumerationValue key="success">Success</enumerationValue>
+                    <enumerationValue key="info">Info</enumerationValue>
+                    <enumerationValue key="inverse">Inverse</enumerationValue>
+                    <enumerationValue key="warning">Warning</enumerationValue>
+                    <enumerationValue key="danger">Danger</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Slide Source">
+            <property key="selector" type="string" required="false" defaultValue=".siema">
+                <caption>HTML Selector</caption>
+                <description>Class name to select HTML DIV section,, direct children are used.</description>
+            </property>
+            <property key="staticHTML" type="string" multiline="true" required="false">
+                <caption>HTML DIV content</caption>
+                <description>allows you to hardcode the slide content. Will be wrapped in DIV.</description>
+            </property>
+            <property key="image_objects" type="datasource" isList="true">
+                <caption>Selection of System.Image files</caption>
+                <description>Use a list of system.image files to be displayed.</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
